@@ -37,7 +37,7 @@ class RoomViewController: UIViewController, FUIAuthDelegate {
     }
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
-        print("Log in Room")
+        print("Log in Second VC")
     }
 
 }

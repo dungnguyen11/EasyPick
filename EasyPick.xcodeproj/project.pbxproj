@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		00538233EB5FBC53D33D008E /* Pods_EasyPickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F86D827E1A712EE7EE412D /* Pods_EasyPickUITests.framework */; };
 		0A0CA1382003499100F17420 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0CA1372003499100F17420 /* RoomViewController.swift */; };
+		0A0CA13B20035ECC00F17420 /* Attendant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0CA13A20035ECC00F17420 /* Attendant.swift */; };
+		0A0CA13D20035ED700F17420 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0CA13C20035ED700F17420 /* Room.swift */; };
 		0A969D7320033BCC00E81494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A969D7220033BCC00E81494 /* AppDelegate.swift */; };
 		0A969D7520033BCC00E81494 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A969D7420033BCC00E81494 /* ViewController.swift */; };
 		0A969D7820033BCC00E81494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A969D7620033BCC00E81494 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		06225D789A9558E80C76715C /* Pods_EasyPick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyPick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		074BFCBC84E91ACAC1404081 /* Pods-EasyPickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPickTests/Pods-EasyPickTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0A0CA1372003499100F17420 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		0A0CA13A20035ECC00F17420 /* Attendant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendant.swift; sourceTree = "<group>"; };
+		0A0CA13C20035ED700F17420 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		0A969D6F20033BCB00E81494 /* EasyPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A969D7220033BCC00E81494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A969D7420033BCC00E81494 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A0CA13920035EB500F17420 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A0CA13A20035ECC00F17420 /* Attendant.swift */,
+				0A0CA13C20035ED700F17420 /* Room.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0A969D6620033BCB00E81494 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +131,7 @@
 		0A969D7120033BCC00E81494 /* EasyPick */ = {
 			isa = PBXGroup;
 			children = (
+				0A0CA13920035EB500F17420 /* Model */,
 				0A969DA020033C4D00E81494 /* GoogleService-Info.plist */,
 				0A969D7220033BCC00E81494 /* AppDelegate.swift */,
 				0A969D7420033BCC00E81494 /* ViewController.swift */,
@@ -478,9 +492,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0CA13B20035ECC00F17420 /* Attendant.swift in Sources */,
 				0A0CA1382003499100F17420 /* RoomViewController.swift in Sources */,
 				0A969D7520033BCC00E81494 /* ViewController.swift in Sources */,
 				0A969D7320033BCC00E81494 /* AppDelegate.swift in Sources */,
+				0A0CA13D20035ED700F17420 /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
