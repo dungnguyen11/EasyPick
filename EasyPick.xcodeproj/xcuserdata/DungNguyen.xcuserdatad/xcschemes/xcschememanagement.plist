@@ -7,7 +7,25 @@
 		<key>EasyPick.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>24</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0A969D6E20033BCB00E81494</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A969D8220033BCC00E81494</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A969D8D20033BCC00E81494</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

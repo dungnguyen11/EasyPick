@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00538233EB5FBC53D33D008E /* Pods_EasyPickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F86D827E1A712EE7EE412D /* Pods_EasyPickUITests.framework */; };
 		0A969D7320033BCC00E81494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A969D7220033BCC00E81494 /* AppDelegate.swift */; };
 		0A969D7520033BCC00E81494 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A969D7420033BCC00E81494 /* ViewController.swift */; };
 		0A969D7820033BCC00E81494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A969D7620033BCC00E81494 /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		0A969D7D20033BCC00E81494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A969D7B20033BCC00E81494 /* LaunchScreen.storyboard */; };
 		0A969D8820033BCC00E81494 /* EasyPickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A969D8720033BCC00E81494 /* EasyPickTests.swift */; };
 		0A969D9320033BCC00E81494 /* EasyPickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A969D9220033BCC00E81494 /* EasyPickUITests.swift */; };
+		0A969DA120033C4D00E81494 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A969DA020033C4D00E81494 /* GoogleService-Info.plist */; };
+		4F9BBA15D4CEF76AEB36ECEF /* Pods_EasyPickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E30E15E1681FA0E1DB9184D /* Pods_EasyPickTests.framework */; };
+		A1FABB8EF857A9414F22D246 /* Pods_EasyPick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06225D789A9558E80C76715C /* Pods_EasyPick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06225D789A9558E80C76715C /* Pods_EasyPick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyPick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		074BFCBC84E91ACAC1404081 /* Pods-EasyPickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPickTests/Pods-EasyPickTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0A969D6F20033BCB00E81494 /* EasyPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A969D7220033BCC00E81494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A969D7420033BCC00E81494 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,14 @@
 		0A969D8E20033BCC00E81494 /* EasyPickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyPickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A969D9220033BCC00E81494 /* EasyPickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyPickUITests.swift; sourceTree = "<group>"; };
 		0A969D9420033BCC00E81494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A969DA020033C4D00E81494 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0E30E15E1681FA0E1DB9184D /* Pods_EasyPickTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyPickTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A02759B881C14D59369025 /* Pods-EasyPickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPickTests/Pods-EasyPickTests.release.xcconfig"; sourceTree = "<group>"; };
+		552337BD5CDDDC2B60B5483C /* Pods-EasyPick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPick.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPick/Pods-EasyPick.release.xcconfig"; sourceTree = "<group>"; };
+		5ABCF3D89B5BD4A86DA87533 /* Pods-EasyPickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPickUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPickUITests/Pods-EasyPickUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5FAE92A030D0AE45773720D6 /* Pods-EasyPick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPick/Pods-EasyPick.debug.xcconfig"; sourceTree = "<group>"; };
+		E04D4BB2112DDA17BFC82D79 /* Pods-EasyPickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPickUITests/Pods-EasyPickUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E5F86D827E1A712EE7EE412D /* Pods_EasyPickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyPickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FABB8EF857A9414F22D246 /* Pods_EasyPick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9BBA15D4CEF76AEB36ECEF /* Pods_EasyPickTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00538233EB5FBC53D33D008E /* Pods_EasyPickUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,8 @@
 				0A969D8620033BCC00E81494 /* EasyPickTests */,
 				0A969D9120033BCC00E81494 /* EasyPickUITests */,
 				0A969D7020033BCB00E81494 /* Products */,
+				3582897EDE19D5D785429511 /* Pods */,
+				783DBBB6EF443D88230A8453 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +116,7 @@
 		0A969D7120033BCC00E81494 /* EasyPick */ = {
 			isa = PBXGroup;
 			children = (
+				0A969DA020033C4D00E81494 /* GoogleService-Info.plist */,
 				0A969D7220033BCC00E81494 /* AppDelegate.swift */,
 				0A969D7420033BCC00E81494 /* ViewController.swift */,
 				0A969D7620033BCC00E81494 /* Main.storyboard */,
@@ -125,6 +145,29 @@
 			path = EasyPickUITests;
 			sourceTree = "<group>";
 		};
+		3582897EDE19D5D785429511 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FAE92A030D0AE45773720D6 /* Pods-EasyPick.debug.xcconfig */,
+				552337BD5CDDDC2B60B5483C /* Pods-EasyPick.release.xcconfig */,
+				074BFCBC84E91ACAC1404081 /* Pods-EasyPickTests.debug.xcconfig */,
+				14A02759B881C14D59369025 /* Pods-EasyPickTests.release.xcconfig */,
+				E04D4BB2112DDA17BFC82D79 /* Pods-EasyPickUITests.debug.xcconfig */,
+				5ABCF3D89B5BD4A86DA87533 /* Pods-EasyPickUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		783DBBB6EF443D88230A8453 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06225D789A9558E80C76715C /* Pods_EasyPick.framework */,
+				0E30E15E1681FA0E1DB9184D /* Pods_EasyPickTests.framework */,
+				E5F86D827E1A712EE7EE412D /* Pods_EasyPickUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A969D9720033BCC00E81494 /* Build configuration list for PBXNativeTarget "EasyPick" */;
 			buildPhases = (
+				B35EB7F5B42AA8B2090AA204 /* [CP] Check Pods Manifest.lock */,
 				0A969D6B20033BCB00E81494 /* Sources */,
 				0A969D6C20033BCB00E81494 /* Frameworks */,
 				0A969D6D20033BCB00E81494 /* Resources */,
+				D3641A7B1617297A5BEE8FD0 /* [CP] Embed Pods Frameworks */,
+				F433A028EBBBC148D290A4CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A969D9A20033BCC00E81494 /* Build configuration list for PBXNativeTarget "EasyPickTests" */;
 			buildPhases = (
+				7C97E4909741787FA08BE7D7 /* [CP] Check Pods Manifest.lock */,
 				0A969D7F20033BCC00E81494 /* Sources */,
 				0A969D8020033BCC00E81494 /* Frameworks */,
 				0A969D8120033BCC00E81494 /* Resources */,
+				2FBB85B0CEA51F5A4EF99386 /* [CP] Embed Pods Frameworks */,
+				6C69B989D287622748957DF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A969D9D20033BCC00E81494 /* Build configuration list for PBXNativeTarget "EasyPickUITests" */;
 			buildPhases = (
+				B9514981F7ADFD5A9AB2D1F2 /* [CP] Check Pods Manifest.lock */,
 				0A969D8A20033BCC00E81494 /* Sources */,
 				0A969D8B20033BCC00E81494 /* Frameworks */,
 				0A969D8C20033BCC00E81494 /* Resources */,
+				2E504129BEA7F5ADEE363883 /* [CP] Embed Pods Frameworks */,
+				86D8C8F051A509E74E7CAE94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A969D7D20033BCC00E81494 /* LaunchScreen.storyboard in Resources */,
+				0A969DA120033C4D00E81494 /* GoogleService-Info.plist in Resources */,
 				0A969D7A20033BCC00E81494 /* Assets.xcassets in Resources */,
 				0A969D7820033BCC00E81494 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +306,169 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E504129BEA7F5ADEE363883 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyPickUITests/Pods-EasyPickUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FBB85B0CEA51F5A4EF99386 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyPickTests/Pods-EasyPickTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C69B989D287622748957DF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyPickTests/Pods-EasyPickTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C97E4909741787FA08BE7D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyPickTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86D8C8F051A509E74E7CAE94 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyPickUITests/Pods-EasyPickUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B35EB7F5B42AA8B2090AA204 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyPick-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9514981F7ADFD5A9AB2D1F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyPickUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3641A7B1617297A5BEE8FD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EasyPick/Pods-EasyPick-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyPick/Pods-EasyPick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F433A028EBBBC148D290A4CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EasyPick/Pods-EasyPick-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyPick/Pods-EasyPick-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A969D6B20033BCB00E81494 /* Sources */ = {
@@ -424,9 +640,11 @@
 		};
 		0A969D9820033BCC00E81494 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FAE92A030D0AE45773720D6 /* Pods-EasyPick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQQXHDUW7N;
 				INFOPLIST_FILE = EasyPick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dungnguyen.EasyPick;
@@ -438,9 +656,11 @@
 		};
 		0A969D9920033BCC00E81494 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 552337BD5CDDDC2B60B5483C /* Pods-EasyPick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQQXHDUW7N;
 				INFOPLIST_FILE = EasyPick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dungnguyen.EasyPick;
@@ -452,6 +672,7 @@
 		};
 		0A969D9B20033BCC00E81494 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 074BFCBC84E91ACAC1404081 /* Pods-EasyPickTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +689,7 @@
 		};
 		0A969D9C20033BCC00E81494 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A02759B881C14D59369025 /* Pods-EasyPickTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +706,7 @@
 		};
 		0A969D9E20033BCC00E81494 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E04D4BB2112DDA17BFC82D79 /* Pods-EasyPickUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +722,7 @@
 		};
 		0A969D9F20033BCC00E81494 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ABCF3D89B5BD4A86DA87533 /* Pods-EasyPickUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

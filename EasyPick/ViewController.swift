@@ -7,17 +7,52 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuthUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FUIAuthDelegate {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    
+        
+        checkLogin()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func checkLogin() {
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil {
+//                self.logout()
+            } else {
+                self.login()
+            }
+        }
+    }
+    
+    func login() {
+        let authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        let authViewController = authUI?.authViewController()
+        self.present(authViewController!, animated: true, completion: nil)
+    }
+    
+    func logout() {
+        let authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        
+        do {
+            try authUI?.signOut()
+        } catch {
+            
+        }
+    }
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        if user != nil {
+            print("Login successfully")
+        }
     }
 
 
