@@ -17,17 +17,23 @@ class ViewController: UIViewController, FUIAuthDelegate {
         super.viewDidLoad()
         
     
-        
         checkLogin()
+        
     }
+    @IBAction func signInDidClicked(_ sender: UIButton) {
+        login()
+    }
+    
+
     
     func checkLogin() {
         Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
-//                self.logout()
-            } else {
-                self.login()
+                self.performSegue(withIdentifier: "RoomSegue", sender: self)
             }
+//            else {
+//                self.login()
+//            }
         }
     }
     
@@ -35,25 +41,32 @@ class ViewController: UIViewController, FUIAuthDelegate {
         let authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
         let authViewController = authUI?.authViewController()
+        print("in Login")
         self.present(authViewController!, animated: true, completion: nil)
     }
     
-    func logout() {
-        let authUI = FUIAuth.defaultAuthUI()
-        authUI?.delegate = self
-        
-        do {
-            try authUI?.signOut()
-        } catch {
-            
-        }
-    }
+//    func logout() {
+//        let authUI = FUIAuth.defaultAuthUI()
+//        authUI?.delegate = self
+//        print("in Logout")
+//        do {
+//            try authUI?.signOut()
+//        } catch {
+//
+//        }
+//    }
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
         if user != nil {
             print("Login successfully")
+            performSegue(withIdentifier: "RoomSegue", sender: self)
         }
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let roomVC: RoomViewController = segue.destination as! RoomViewController
+//
+//    }
 
 
 }
