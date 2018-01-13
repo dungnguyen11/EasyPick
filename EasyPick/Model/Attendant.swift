@@ -24,4 +24,9 @@ class Attendant {
         self.isAdmin = false
         self.rooms = []
     }
+    
+    init(id: String, name: String) {
+        self.id = id
+        self.name = name
+    }
 }

@@ -10,30 +10,27 @@ import UIKit
 import Firebase
 import FirebaseAuthUI
 
-class ViewController: UIViewController, FUIAuthDelegate {
+class LoginViewController: UIViewController, FUIAuthDelegate, UINavigationControllerDelegate {
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
         checkLogin()
-        
-    }
-    @IBAction func signInDidClicked(_ sender: UIButton) {
-        login()
     }
     
 
+    @IBAction func LoginButtonClicked(_ sender: UIBarButtonItem) {
+        print("Log in did clicked")
+        login()
+    }
+    
     
     func checkLogin() {
         Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
                 self.performSegue(withIdentifier: "RoomSegue", sender: self)
             }
-//            else {
-//                self.login()
-//            }
         }
     }
     
@@ -45,17 +42,6 @@ class ViewController: UIViewController, FUIAuthDelegate {
         self.present(authViewController!, animated: true, completion: nil)
     }
     
-//    func logout() {
-//        let authUI = FUIAuth.defaultAuthUI()
-//        authUI?.delegate = self
-//        print("in Logout")
-//        do {
-//            try authUI?.signOut()
-//        } catch {
-//
-//        }
-//    }
-    
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
         if user != nil {
             print("Login successfully")
@@ -64,7 +50,8 @@ class ViewController: UIViewController, FUIAuthDelegate {
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let roomVC: RoomViewController = segue.destination as! RoomViewController
+//        let roomVC: RoomTableViewController = segue.destination as! RoomTableViewController
+//
 //
 //    }
 
