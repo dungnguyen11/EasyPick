@@ -17,6 +17,8 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
     var roomRef: DatabaseReference!
     var rooms = [Room]()
     
+    @IBOutlet var roomTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,25 +36,29 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
                     let roomCurrentNumber = room?["currentNumber"]
                     let roomId = room?["id"]
                     
-                    let creatorSnapshot = snapshot.childSnapshot(forPath: "creator")
-                    let creator = creatorSnapshot.value as? [String: AnyObject]
-                    let creatorName = creator?["name"]
-                    let creatorId = creator?["id"]
+//                    let creatorSnapshot = snapshot.childSnapshot(forPath: "creator")
+//                    let creator = creatorSnapshot.value as? [String: AnyObject]
+//                    let creatorName = creator?["name"]
+//                    let creatorId = creator?["id"]
                     
                     
                     
                     let newRoom = Room(id: roomId as! String, name: roomName as! String, creator: nil, currentNumber: roomCurrentNumber as! Int)
                     
                     self.rooms.append(newRoom)
-                    print(rooms)
+                    
+                    print("on loop, rooms count: \(self.rooms.count)")
                 }
+                self.roomTableView.reloadData()
             }
         }
         
+        print("onViewDidLoad, rooms count: \(rooms.count)")
         
         
-        addRoomToDatabase(roomReference: roomRef, room: newRoom)
-        addRoomToDatabase(roomReference: roomRef, room: newRoom2)
+        
+//        addRoomToDatabase(roomReference: roomRef, room: newRoom)
+//        addRoomToDatabase(roomReference: roomRef, room: newRoom2)
         
         
         
@@ -65,6 +71,11 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
         
         
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        roomTableView.reloadData()
+//    }
     
     func addRoomToDatabase(roomReference: DatabaseReference, room: Room) {
         roomReference.child(room.id!).setValue(["name" : room.name!,
@@ -104,26 +115,31 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+         print("on Table View Load, rooms count: \(rooms.count)")
+        return rooms.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cellIdentifier = "RoomTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RoomTableViewCell else {
+            fatalError("The dequeued cell is not an instance of RoomTableViewCell")
+        }
 
-        // Configure the cell...
+       let room = rooms[indexPath.row]
+        
+        cell.roomNameLabel.text = room.name
+        cell.currentNumberLabel.text = room.currentNumber?.description
+        
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
