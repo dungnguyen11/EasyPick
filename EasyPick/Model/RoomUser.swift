@@ -8,25 +8,23 @@
 
 import Foundation
 
-class Attendant {
+class RoomUser {
     var id: String?
     var name: String?
-    var myCurrentNumber: Int?
-    var myCurrentRoom: Room?
-    var isAdmin: Bool?
-    var rooms: [Room]?
+    var currentNumber: Int?
+    var currentRoom: Room?
     
     init(name: String) {
         self.id = NSUUID().uuidString
         self.name = name
-        self.myCurrentNumber = 0
-        self.myCurrentRoom = nil
-        self.isAdmin = false
-        self.rooms = []
+        self.currentNumber = 0
+        self.currentRoom = nil
     }
     
     init(id: String, name: String) {
         self.id = id
         self.name = name
+        self.currentNumber = 0
+        self.currentRoom = nil
     }
 }

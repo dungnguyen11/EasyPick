@@ -178,9 +178,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RFU-ct-bGj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Room Name" id="5sQ-qK-K1a"/>
+                    <navigationItem key="navigationItem" title="Room Name" id="5sQ-qK-K1a">
+                        <barButtonItem key="rightBarButtonItem" title="Take Number" id="RGH-NK-UmU">
+                            <connections>
+                                <action selector="takeNumberButtonClicked:" destination="xte-Zk-Z1G" id="1Aa-qc-Yvg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="roomCurrentNumber" destination="qoS-fh-Na5" id="5Zk-2e-vif"/>
+                        <outlet property="takeNumberButton" destination="RGH-NK-UmU" id="LL7-6F-7Lq"/>
                         <outlet property="userCurrentNumber" destination="yh1-cW-Aw9" id="yRb-rl-uwo"/>
                     </connections>
                 </viewController>

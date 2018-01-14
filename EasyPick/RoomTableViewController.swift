@@ -15,6 +15,7 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
     //Firebase
     var currentUser = Auth.auth().currentUser
     var roomRef: DatabaseReference!
+    var userRef: DatabaseReference!
     var rooms = [Room]()
     
     @IBOutlet var roomTableView: UITableView!
@@ -25,9 +26,29 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
 //        let newRoom = Room(name: "Hospital Room 5", creator: Attendant(name: (currentUser?.displayName)!))
 //        let newRoom2 = Room(name: "Hospital Room 6", creator: Attendant(name: (currentUser?.displayName)!))
         
-        roomRef = Database.database().reference().child("Rooms")
+        // Add user if he/she does not have information on realtime-database
+        var isUserSaved = false
+        userRef = Database.database().reference().child("Users")
+        userRef.observeSingleEvent(of: .value) { (snapshot) in
+            print("In check user")
+            for users in snapshot.children.allObjects as! [DataSnapshot] {
+                let user = users.value as? [String: AnyObject]
+                let userId = user?["id"] as? Int
+                if self.currentUser?.providerID == userId?.description {
+                    isUserSaved = true
+                }
+            }
+            
+            if !isUserSaved {
+                let newUser = RoomUser(id: (self.currentUser?.uid)!,
+                                       name: (self.currentUser?.displayName)!)
+                self.addUserToDatabase(userReference: self.userRef, user: newUser)
+            }
+        }
+        
         
         // Load all available rooms from Firebase database
+        roomRef = Database.database().reference().child("Rooms")
         roomRef.observeSingleEvent(of: .value) { (snapshot) in
             if snapshot.childrenCount > 0 {
                 self.rooms = []
@@ -35,6 +56,7 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
                     let room = rooms.value as? [String: AnyObject]
                     let roomName = room?["name"]
                     let roomCurrentNumber = room?["currentNumber"]
+                    let roomTotalUsers = room?["totalUsers"] ?? 0 as AnyObject
                     let roomId = room?["id"]
                     
 //                    let creatorSnapshot = snapshot.childSnapshot(forPath: "creator")
@@ -42,8 +64,7 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
 //                    let creatorName = creator?["name"]
 //                    let creatorId = creator?["id"]
                     
-                    let newRoom = Room(id: roomId as! String, name: roomName as! String, creator: nil, currentNumber: roomCurrentNumber as! Int)
-                    
+                    let newRoom = Room(id: roomId as! String, name: roomName as! String, creator: nil, currentNumber: roomCurrentNumber as! Int, totalUsers: roomTotalUsers as? Int)
                     self.rooms.append(newRoom)
                     
                     print("on loop, rooms count: \(self.rooms.count)")
@@ -87,17 +108,6 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
         
 //        addRoomToDatabase(roomReference: roomRef, room: newRoom)
 //        addRoomToDatabase(roomReference: roomRef, room: newRoom2)
-        
-        
-        
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        
     }
     
 //    override func viewDidAppear(_ animated: Bool) {
@@ -105,6 +115,9 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
 //        roomTableView.reloadData()
 //    }
     
+    
+    // MARK: Private functions
+    // Add room to Database
     func addRoomToDatabase(roomReference: DatabaseReference, room: Room) {
         roomReference.child(room.id!).setValue(["name" : room.name!,
                                                  "id" : room.id!,
@@ -113,9 +126,12 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
                                                                   "id" : room.creator?.id])
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Add user to Database
+    func addUserToDatabase(userReference: DatabaseReference, user: RoomUser) {
+        // Need to add currentRoom to user info on database
+        userRef.child(user.id!).setValue(["name" : user.name!,
+                                          "id": user.id!,
+                                          "currentNumber": user.currentNumber!])
     }
     
     
@@ -142,6 +158,7 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
         print("Log in Second VC")
     }
     
+    // prepare a selected room for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch (segue.identifier ?? "") {
         case "ShowDetail":
