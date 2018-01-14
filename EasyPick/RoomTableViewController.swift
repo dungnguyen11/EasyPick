@@ -27,6 +27,7 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
         
         roomRef = Database.database().reference().child("Rooms")
         
+        // Load all available rooms from Firebase database
         roomRef.observeSingleEvent(of: .value) { (snapshot) in
             if snapshot.childrenCount > 0 {
                 self.rooms = []
@@ -41,8 +42,6 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
 //                    let creatorName = creator?["name"]
 //                    let creatorId = creator?["id"]
                     
-                    
-                    
                     let newRoom = Room(id: roomId as! String, name: roomName as! String, creator: nil, currentNumber: roomCurrentNumber as! Int)
                     
                     self.rooms.append(newRoom)
@@ -52,6 +51,35 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
                 self.roomTableView.reloadData()
             }
         }
+        
+        // Reload tableView when currentNumber or name of a room change
+        roomRef.observe(.childChanged) { (snapshot) in
+            print("snapshot in change: \(snapshot)")
+            let roomChanged = snapshot.value as? [String: AnyObject]
+            let roomChangedId = roomChanged?["id"] as? String
+            for room in self.rooms {
+                if room.id == roomChangedId {
+                    room.currentNumber = roomChanged?["currentNumber"] as? Int
+                    room.name = roomChanged?["name"] as? String
+                }
+            }
+            self.roomTableView.reloadData()
+            print("in reload when change")
+        }
+        
+        // Reload tableView when a room is deleted
+        roomRef.observe(.childRemoved) { (snapshot) in
+            print("snapshot in remove: \(snapshot)")
+            let roomDeleted = snapshot.value as? [String: AnyObject]
+            let roomDeletedId = roomDeleted?["id"] as? String
+            for (index, room) in self.rooms.enumerated() {
+                if room.id == roomDeletedId {
+                    self.rooms.remove(at: index)
+                }
+            }
+            self.roomTableView.reloadData()
+        }
+        
         
         print("onViewDidLoad, rooms count: \(rooms.count)")
         
@@ -112,6 +140,29 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
         print("Log in Second VC")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch (segue.identifier ?? "") {
+        case "ShowDetail":
+            guard let roomDetailViewController = segue.destination as? RoomViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedRoomCell = sender as? RoomTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedRoomCell) else {
+                fatalError("The selected room is not display by the table")
+            }
+            
+            let selectedRoom = self.rooms[indexPath.row]
+            roomDetailViewController.room = selectedRoom
+            
+        default:
+            fatalError("Unexpected identifier: \(String(describing: segue.identifier))")
+        }
     }
 
     // MARK: - Table view data source

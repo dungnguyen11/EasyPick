@@ -92,6 +92,7 @@
                                     <outlet property="currentNumberLabel" destination="zRN-cF-Pik" id="iXC-j7-EsZ"/>
                                     <outlet property="roomNameLabel" destination="Ab8-uk-omi" id="c45-MZ-pWQ"/>
                                     <outlet property="roomPhotoImageView" destination="P5S-e6-T7L" id="3Ye-dq-I0d"/>
+                                    <segue destination="xte-Zk-Z1G" kind="show" identifier="ShowDetail" id="hpS-V1-jv9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -116,6 +117,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vc-QW-bxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2181.5999999999999" y="-9.4452773613193415"/>
+        </scene>
+        <!--Room Name-->
+        <scene sceneID="K7e-YR-gEP">
+            <objects>
+                <viewController id="xte-Zk-Z1G" customClass="RoomViewController" customModule="EasyPick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aGP-P7-zHB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh1-cW-Aw9">
+                                <rect key="frame" x="16" y="328" width="343" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="Ni8-gM-gkl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xi9-To-wc5">
+                                <rect key="frame" x="16" y="80" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="s5E-GE-nOo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-uh-V53">
+                                <rect key="frame" x="16" y="299" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bGD-hI-zFY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoS-fh-Na5">
+                                <rect key="frame" x="16" y="109" width="343" height="182"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xi9-To-wc5" firstAttribute="top" secondItem="RFU-ct-bGj" secondAttribute="top" constant="16" id="0Lr-qR-J6o"/>
+                            <constraint firstItem="hcc-uh-V53" firstAttribute="trailing" secondItem="yh1-cW-Aw9" secondAttribute="trailing" id="5eN-80-5KZ"/>
+                            <constraint firstItem="yh1-cW-Aw9" firstAttribute="top" secondItem="hcc-uh-V53" secondAttribute="bottom" constant="8" symbolic="YES" id="B3B-5P-RF3"/>
+                            <constraint firstItem="Xi9-To-wc5" firstAttribute="leading" secondItem="aGP-P7-zHB" secondAttribute="leadingMargin" id="Dtu-VR-cd0"/>
+                            <constraint firstItem="hcc-uh-V53" firstAttribute="top" secondItem="qoS-fh-Na5" secondAttribute="bottom" constant="8" symbolic="YES" id="HBa-eP-OFu"/>
+                            <constraint firstItem="Xi9-To-wc5" firstAttribute="trailing" secondItem="aGP-P7-zHB" secondAttribute="trailingMargin" id="K1u-t0-eBX"/>
+                            <constraint firstItem="qoS-fh-Na5" firstAttribute="leading" secondItem="hcc-uh-V53" secondAttribute="leading" id="Nla-bb-Ri5"/>
+                            <constraint firstItem="qoS-fh-Na5" firstAttribute="trailing" secondItem="hcc-uh-V53" secondAttribute="trailing" id="YHe-Tz-7qO"/>
+                            <constraint firstItem="RFU-ct-bGj" firstAttribute="bottom" secondItem="yh1-cW-Aw9" secondAttribute="bottom" constant="182" id="Z44-6a-zYo"/>
+                            <constraint firstItem="Xi9-To-wc5" firstAttribute="leading" secondItem="qoS-fh-Na5" secondAttribute="leading" id="cGo-ZW-OLa"/>
+                            <constraint firstItem="Xi9-To-wc5" firstAttribute="trailing" secondItem="qoS-fh-Na5" secondAttribute="trailing" id="jhm-5m-IUG"/>
+                            <constraint firstItem="hcc-uh-V53" firstAttribute="leading" secondItem="yh1-cW-Aw9" secondAttribute="leading" id="p6D-KO-qrF"/>
+                            <constraint firstItem="qoS-fh-Na5" firstAttribute="top" secondItem="Xi9-To-wc5" secondAttribute="bottom" constant="8" symbolic="YES" id="xwY-4C-Rgw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RFU-ct-bGj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Room Name" id="5sQ-qK-K1a"/>
+                    <connections>
+                        <outlet property="roomCurrentNumber" destination="qoS-fh-Na5" id="5Zk-2e-vif"/>
+                        <outlet property="userCurrentNumber" destination="yh1-cW-Aw9" id="yRb-rl-uwo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijH-ug-Id2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3133.5999999999999" y="-9.4452773613193415"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XcQ-Ze-XMa">

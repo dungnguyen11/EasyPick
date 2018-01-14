@@ -10,6 +10,7 @@
 		00538233EB5FBC53D33D008E /* Pods_EasyPickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F86D827E1A712EE7EE412D /* Pods_EasyPickUITests.framework */; };
 		0A0CA13B20035ECC00F17420 /* Attendant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0CA13A20035ECC00F17420 /* Attendant.swift */; };
 		0A0CA13D20035ED700F17420 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0CA13C20035ED700F17420 /* Room.swift */; };
+		0A3B513E200B3382008711A0 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B513D200B3382008711A0 /* RoomViewController.swift */; };
 		0A91BE40200A270D000BC423 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A91BE3F200A270D000BC423 /* GoogleService-Info.plist */; };
 		0A91BE42200A28BC000BC423 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A91BE41200A28BC000BC423 /* RoomTableViewCell.swift */; };
 		0A91BE44200A28E3000BC423 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A91BE43200A28E3000BC423 /* RoomTableViewController.swift */; };
@@ -46,6 +47,7 @@
 		074BFCBC84E91ACAC1404081 /* Pods-EasyPickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPickTests/Pods-EasyPickTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0A0CA13A20035ECC00F17420 /* Attendant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendant.swift; sourceTree = "<group>"; };
 		0A0CA13C20035ED700F17420 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		0A3B513D200B3382008711A0 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		0A91BE3F200A270D000BC423 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A91BE41200A28BC000BC423 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		0A91BE43200A28E3000BC423 /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				0A969D7420033BCC00E81494 /* LoginViewController.swift */,
 				0A91BE43200A28E3000BC423 /* RoomTableViewController.swift */,
 				0A91BE41200A28BC000BC423 /* RoomTableViewCell.swift */,
+				0A3B513D200B3382008711A0 /* RoomViewController.swift */,
 				0A969D7620033BCC00E81494 /* Main.storyboard */,
 				0A91BE3F200A270D000BC423 /* GoogleService-Info.plist */,
 				0A969D7920033BCC00E81494 /* Assets.xcassets */,
@@ -497,6 +500,7 @@
 			files = (
 				0A91BE42200A28BC000BC423 /* RoomTableViewCell.swift in Sources */,
 				0A91BE44200A28E3000BC423 /* RoomTableViewController.swift in Sources */,
+				0A3B513E200B3382008711A0 /* RoomViewController.swift in Sources */,
 				0A0CA13B20035ECC00F17420 /* Attendant.swift in Sources */,
 				0A969D7520033BCC00E81494 /* LoginViewController.swift in Sources */,
 				0A969D7320033BCC00E81494 /* AppDelegate.swift in Sources */,
