@@ -23,6 +23,7 @@
 		0A969D9320033BCC00E81494 /* EasyPickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A969D9220033BCC00E81494 /* EasyPickUITests.swift */; };
 		4F9BBA15D4CEF76AEB36ECEF /* Pods_EasyPickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E30E15E1681FA0E1DB9184D /* Pods_EasyPickTests.framework */; };
 		A1FABB8EF857A9414F22D246 /* Pods_EasyPick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06225D789A9558E80C76715C /* Pods_EasyPick.framework */; };
+		C09B0FB120036BD7008E5F80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C09B0FB020036BD7008E5F80 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		552337BD5CDDDC2B60B5483C /* Pods-EasyPick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPick.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPick/Pods-EasyPick.release.xcconfig"; sourceTree = "<group>"; };
 		5ABCF3D89B5BD4A86DA87533 /* Pods-EasyPickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPickUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPickUITests/Pods-EasyPickUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5FAE92A030D0AE45773720D6 /* Pods-EasyPick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPick/Pods-EasyPick.debug.xcconfig"; sourceTree = "<group>"; };
+		C09B0FB020036BD7008E5F80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E04D4BB2112DDA17BFC82D79 /* Pods-EasyPickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPickUITests/Pods-EasyPickUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5F86D827E1A712EE7EE412D /* Pods_EasyPickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyPickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +138,10 @@
 			isa = PBXGroup;
 			children = (
 				0A0CA13920035EB500F17420 /* Model */,
+<<<<<<< HEAD
+=======
+				C09B0FB020036BD7008E5F80 /* GoogleService-Info.plist */,
+>>>>>>> 9ecaeef336c691169f5a702456a152174b3237f1
 				0A969D7220033BCC00E81494 /* AppDelegate.swift */,
 				0A969D7420033BCC00E81494 /* LoginViewController.swift */,
 				0A91BE43200A28E3000BC423 /* RoomTableViewController.swift */,
@@ -308,7 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A969D7D20033BCC00E81494 /* LaunchScreen.storyboard in Resources */,
+<<<<<<< HEAD
 				0A91BE40200A270D000BC423 /* GoogleService-Info.plist in Resources */,
+=======
+				C09B0FB120036BD7008E5F80 /* GoogleService-Info.plist in Resources */,
+>>>>>>> 9ecaeef336c691169f5a702456a152174b3237f1
 				0A969D7A20033BCC00E81494 /* Assets.xcassets in Resources */,
 				0A969D7820033BCC00E81494 /* Main.storyboard in Resources */,
 			);
