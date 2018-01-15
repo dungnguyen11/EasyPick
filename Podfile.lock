@@ -32,9 +32,9 @@ PODS:
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseUI/Auth (4.5.0):
+  - FirebaseUI/Auth (4.5.1):
     - Firebase/Auth (~> 4.2)
-  - FirebaseUI/Google (4.5.0):
+  - FirebaseUI/Google (4.5.1):
     - FirebaseUI/Auth
     - GoogleSignIn (~> 4.0)
   - GoogleSignIn (4.1.1):
@@ -82,7 +82,7 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
   FirebaseStorage: ab08d1c93a2feffa038fdd6693088b310ab1e6c6
-  FirebaseUI: 883482fea73b73bbb488c55176f4c6ad128957eb
+  FirebaseUI: 1dc9c8a87a776b488a28a28541f029e60c824cfd
   GoogleSignIn: 3fdaa34a2ba04dbd7a25d7db39aecb0da98d5bdc
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2

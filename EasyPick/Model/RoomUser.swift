@@ -12,19 +12,19 @@ class RoomUser {
     var id: String?
     var name: String?
     var currentNumber: Int?
-    var currentRoom: Room?
+    var currentRoomId: String?
     
     init(name: String) {
         self.id = NSUUID().uuidString
         self.name = name
         self.currentNumber = 0
-        self.currentRoom = nil
+        self.currentRoomId = nil
     }
     
     init(id: String, name: String) {
         self.id = id
         self.name = name
         self.currentNumber = 0
-        self.currentRoom = nil
+        self.currentRoomId = nil
     }
 }

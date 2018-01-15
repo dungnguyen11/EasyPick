@@ -33,12 +33,12 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
             print("In check user")
             for users in snapshot.children.allObjects as! [DataSnapshot] {
                 let user = users.value as? [String: AnyObject]
-                let userId = user?["id"] as? Int
-                if self.currentUser?.providerID == userId?.description {
+                let userId = user?["id"]
+                if self.currentUser?.uid == userId?.description {
                     isUserSaved = true
                 }
             }
-            
+            print("isUserSaved: \(isUserSaved)")
             if !isUserSaved {
                 let newUser = RoomUser(id: (self.currentUser?.uid)!,
                                        name: (self.currentUser?.displayName)!)
@@ -64,7 +64,7 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
 //                    let creatorName = creator?["name"]
 //                    let creatorId = creator?["id"]
                     
-                    let newRoom = Room(id: roomId as! String, name: roomName as! String, creator: nil, currentNumber: roomCurrentNumber as! Int, totalUsers: roomTotalUsers as? Int)
+                    let newRoom = Room(id: roomId as! String, name: roomName as! String, creatorId: nil, currentNumber: roomCurrentNumber as! Int, totalUsers: roomTotalUsers as? Int)
                     self.rooms.append(newRoom)
                     
                     print("on loop, rooms count: \(self.rooms.count)")
@@ -121,9 +121,8 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
     func addRoomToDatabase(roomReference: DatabaseReference, room: Room) {
         roomReference.child(room.id!).setValue(["name" : room.name!,
                                                  "id" : room.id!,
-                                                 "currentNumber" : room.currentNumber!])
-        roomReference.child(room.id!).child("creator").setValue(["name" : room.creator?.name,
-                                                                  "id" : room.creator?.id])
+                                                 "currentNumber" : room.currentNumber!,
+                                                 "creatorId": nil])
     }
 
     // Add user to Database
