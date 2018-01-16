@@ -31,7 +31,7 @@ class Room : NSObject {
         self.totalUsers = 0
     }
     
-    init(id: String, name: String, creatorId: String?, currentNumber: Int, totalUsers: Int?) {
+    init(id: String, name: String, creatorId: String, currentNumber: Int, totalUsers: Int?) {
         self.id = id
         self.name = name
         self.creatorId = creatorId

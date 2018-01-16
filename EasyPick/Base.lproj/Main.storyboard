@@ -53,45 +53,35 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospital" translatesAutoresizingMaskIntoConstraints="NO" id="P5S-e6-T7L">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="qo3-6g-7RL"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab8-uk-omi">
-                                            <rect key="frame" x="116" y="19" width="243" height="29"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="29"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="29" id="uHp-70-jDb"/>
+                                                <constraint firstAttribute="height" constant="29" id="ebk-4T-5Wq"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Number: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRN-cF-Pik">
-                                            <rect key="frame" x="116" y="64" width="243" height="21"/>
+                                            <rect key="frame" x="16" y="55" width="343" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="trailing" secondItem="zRN-cF-Pik" secondAttribute="trailing" id="7Kv-3n-Cmx"/>
-                                        <constraint firstItem="P5S-e6-T7L" firstAttribute="leading" secondItem="oVR-N1-lTC" secondAttribute="leading" id="7hz-Ll-cMI"/>
-                                        <constraint firstItem="P5S-e6-T7L" firstAttribute="centerY" secondItem="oVR-N1-lTC" secondAttribute="centerY" id="AEx-MW-X2K"/>
-                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="top" secondItem="oVR-N1-lTC" secondAttribute="topMargin" constant="8" id="MRa-Jt-pCb"/>
-                                        <constraint firstItem="P5S-e6-T7L" firstAttribute="top" secondItem="oVR-N1-lTC" secondAttribute="top" id="PY2-RH-JPa"/>
-                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="leading" secondItem="zRN-cF-Pik" secondAttribute="leading" id="QSe-Ai-FAS"/>
-                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="trailing" secondItem="oVR-N1-lTC" secondAttribute="trailingMargin" id="TNN-n6-dqY"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="zRN-cF-Pik" secondAttribute="bottom" constant="4" id="fdg-6g-p6E"/>
-                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="leading" secondItem="P5S-e6-T7L" secondAttribute="trailing" constant="16" id="fk8-dC-2Pj"/>
-                                        <constraint firstItem="zRN-cF-Pik" firstAttribute="top" secondItem="Ab8-uk-omi" secondAttribute="bottom" constant="16" id="fkz-1N-yGX"/>
+                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="leading" secondItem="oVR-N1-lTC" secondAttribute="leadingMargin" id="1tg-JD-M9r"/>
+                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="trailing" secondItem="zRN-cF-Pik" secondAttribute="trailing" id="85v-Eo-bqd"/>
+                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="leading" secondItem="zRN-cF-Pik" secondAttribute="leading" id="Jjm-t4-Fmz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zRN-cF-Pik" secondAttribute="bottom" constant="13" id="QFc-WF-X0i"/>
+                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="top" secondItem="oVR-N1-lTC" secondAttribute="topMargin" id="bvF-9a-mx3"/>
+                                        <constraint firstItem="zRN-cF-Pik" firstAttribute="top" secondItem="Ab8-uk-omi" secondAttribute="bottom" constant="15" id="cPy-18-vii"/>
+                                        <constraint firstItem="Ab8-uk-omi" firstAttribute="trailing" secondItem="oVR-N1-lTC" secondAttribute="trailingMargin" id="vYN-q2-CPb"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="currentNumberLabel" destination="zRN-cF-Pik" id="iXC-j7-EsZ"/>
                                     <outlet property="roomNameLabel" destination="Ab8-uk-omi" id="c45-MZ-pWQ"/>
-                                    <outlet property="roomPhotoImageView" destination="P5S-e6-T7L" id="3Ye-dq-I0d"/>
                                     <segue destination="xte-Zk-Z1G" kind="show" identifier="ShowDetail" id="hpS-V1-jv9"/>
                                 </connections>
                             </tableViewCell>
@@ -232,7 +222,4 @@
             <point key="canvasLocation" x="1417" y="-9"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="hospital" width="300" height="168"/>
-    </resources>
 </document>

@@ -58,13 +58,13 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
                     let roomCurrentNumber = room?["currentNumber"]
                     let roomTotalUsers = room?["totalUsers"] ?? 0 as AnyObject
                     let roomId = room?["id"]
+                    let roomCreateId = room?["creatorId"]
                     
-//                    let creatorSnapshot = snapshot.childSnapshot(forPath: "creator")
-//                    let creator = creatorSnapshot.value as? [String: AnyObject]
-//                    let creatorName = creator?["name"]
-//                    let creatorId = creator?["id"]
-                    
-                    let newRoom = Room(id: roomId as! String, name: roomName as! String, creatorId: nil, currentNumber: roomCurrentNumber as! Int, totalUsers: roomTotalUsers as? Int)
+                    let newRoom = Room(id: roomId as! String,
+                                       name: roomName as! String,
+                                       creatorId: roomCreateId as! String,
+                                       currentNumber: roomCurrentNumber as! Int,
+                                       totalUsers: roomTotalUsers as? Int)
                     self.rooms.append(newRoom)
                     
                     print("on loop, rooms count: \(self.rooms.count)")
@@ -202,7 +202,7 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
        let room = rooms[indexPath.row]
         
         cell.roomNameLabel.text = room.name
-        cell.currentNumberLabel.text = room.currentNumber?.description
+        cell.currentNumberLabel.text = "Current number: \(room.currentNumber!.description)"
         
 
         return cell

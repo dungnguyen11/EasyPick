@@ -11,7 +11,6 @@ import UIKit
 class RoomTableViewCell: UITableViewCell {
     //MARK: Properties
     @IBOutlet weak var roomNameLabel: UILabel!
-    @IBOutlet weak var roomPhotoImageView: UIImageView!
     @IBOutlet weak var currentNumberLabel: UILabel!
     
     
