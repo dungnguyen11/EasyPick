@@ -30,16 +30,16 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
         var isUserSaved = false
         userRef = Database.database().reference().child("Users")
         userRef.observeSingleEvent(of: .value) { (snapshot) in
-            print("In check user")
             for users in snapshot.children.allObjects as! [DataSnapshot] {
                 let user = users.value as? [String: AnyObject]
-                let userId = user?["id"]
-                if self.currentUser?.uid == userId?.description {
+                let userId = user?["id"] as? String
+                if self.currentUser?.uid == userId {
                     isUserSaved = true
                 }
             }
             print("isUserSaved: \(isUserSaved)")
             if !isUserSaved {
+                print("call on Unsaved")
                 let newUser = RoomUser(id: (self.currentUser?.uid)!,
                                        name: (self.currentUser?.displayName)!)
                 self.addUserToDatabase(userReference: self.userRef, user: newUser)
@@ -66,8 +66,6 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
                                        currentNumber: roomCurrentNumber as! Int,
                                        totalUsers: roomTotalUsers as? Int)
                     self.rooms.append(newRoom)
-                    
-                    print("on loop, rooms count: \(self.rooms.count)")
                 }
                 self.roomTableView.reloadData()
             }
@@ -75,7 +73,6 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
         
         // Reload tableView when currentNumber or name of a room change
         roomRef.observe(.childChanged) { (snapshot) in
-            print("snapshot in change: \(snapshot)")
             let roomChanged = snapshot.value as? [String: AnyObject]
             let roomChangedId = roomChanged?["id"] as? String
             for room in self.rooms {
@@ -85,12 +82,10 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
                 }
             }
             self.roomTableView.reloadData()
-            print("in reload when change")
         }
         
         // Reload tableView when a room is deleted
         roomRef.observe(.childRemoved) { (snapshot) in
-            print("snapshot in remove: \(snapshot)")
             let roomDeleted = snapshot.value as? [String: AnyObject]
             let roomDeletedId = roomDeleted?["id"] as? String
             for (index, room) in self.rooms.enumerated() {
@@ -100,7 +95,6 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
             }
             self.roomTableView.reloadData()
         }
-        print("onViewDidLoad, rooms count: \(rooms.count)")
     }
     
     

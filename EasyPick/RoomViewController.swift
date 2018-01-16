@@ -32,12 +32,14 @@ class RoomViewController: UIViewController {
         
         //Handle change in current user change
         currentUserRef = Database.database().reference().child("Users").child((currentUser?.uid)!)
-        currentUserRef?.observe(.value, with: { (snapshot) in
+        
+        currentUserRef?.observeSingleEvent(of: .value, with: { (snapshot) in
             let userObject = snapshot.value as? [String: AnyObject]
             let userId = self.currentUser?.uid
             let userName = self.currentUser?.displayName
             let currentNumberOfUser = userObject!["currentNumber"] as! Int
             let currentRoomIdOfUser = userObject!["currentRoomId"] as! String
+            
             self.user = RoomUser(id: userId!,
                                  name: userName!,
                                  currentNumber: currentNumberOfUser,
@@ -73,7 +75,9 @@ class RoomViewController: UIViewController {
             }
             
             // Reset currentNumber of user to 0, when currentNumber of room larger than currentNumber of user
-            print("hasNumberInThisRoom: \(self.hasNumberInThisRoom)")
+//            print("hasNumberInThisRoom: \(self.hasNumberInThisRoom)")
+            print("room currentNumber: \(self.room?.currentNumber)")
+            print("user currentNumber: \(self.user?.currentNumber)")
             if self.hasNumberInThisRoom! && (self.room!.currentNumber! >= self.user!.currentNumber!) {
                 self.currentUserRef?.updateChildValues(["currentNumber" : 0])
                 self.userCurrentNumber.text = 0.description
