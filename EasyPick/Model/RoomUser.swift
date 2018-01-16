@@ -27,4 +27,11 @@ class RoomUser {
         self.currentNumber = 0
         self.currentRoomId = nil
     }
+    
+    init(id: String, name: String, currentNumber: Int, currentRoomId: String) {
+        self.id = id
+        self.name = name
+        self.currentNumber = currentNumber
+        self.currentRoomId = currentRoomId
+    }
 }
