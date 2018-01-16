@@ -49,7 +49,7 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
         
         // Load all available rooms from Firebase database
         roomRef = Database.database().reference().child("Rooms")
-        roomRef.observeSingleEvent(of: .value) { (snapshot) in
+        roomRef.observe( .value) { (snapshot) in
             if snapshot.childrenCount > 0 {
                 self.rooms = []
                 for rooms in snapshot.children.allObjects as! [DataSnapshot] {

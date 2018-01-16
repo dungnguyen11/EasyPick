@@ -73,8 +73,11 @@ class RoomViewController: UIViewController {
             }
             
             // Reset currentNumber of user to 0, when currentNumber of room larger than currentNumber of user
-            if self.hasNumberInThisRoom! && (self.room!.currentNumber! > self.user!.currentNumber!) {
+            print("hasNumberInThisRoom: \(self.hasNumberInThisRoom)")
+            if self.hasNumberInThisRoom! && (self.room!.currentNumber! >= self.user!.currentNumber!) {
                 self.currentUserRef?.updateChildValues(["currentNumber" : 0])
+                self.userCurrentNumber.text = 0.description
+                self.currentUserRef?.updateChildValues(["currentRoomId" : ""])
                 self.takeNumberButton.isEnabled = true
             }
         })
