@@ -100,20 +100,8 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
             }
             self.roomTableView.reloadData()
         }
-        
-        
         print("onViewDidLoad, rooms count: \(rooms.count)")
-        
-        
-        
-//        addRoomToDatabase(roomReference: roomRef, room: newRoom)
-//        addRoomToDatabase(roomReference: roomRef, room: newRoom2)
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        roomTableView.reloadData()
-//    }
     
     
     // MARK: Private functions

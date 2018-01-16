@@ -18,14 +18,14 @@ class RoomUser {
         self.id = NSUUID().uuidString
         self.name = name
         self.currentNumber = 0
-        self.currentRoomId = nil
+        self.currentRoomId = ""
     }
     
     init(id: String, name: String) {
         self.id = id
         self.name = name
         self.currentNumber = 0
-        self.currentRoomId = nil
+        self.currentRoomId = ""
     }
     
     init(id: String, name: String, currentNumber: Int, currentRoomId: String) {
