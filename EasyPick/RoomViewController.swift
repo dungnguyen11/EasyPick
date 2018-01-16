@@ -27,7 +27,7 @@ class RoomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        takeNumberButton.isEnabled = true
+
         hasNumberInThisRoom = false
         
         //Handle change in current user change
@@ -48,6 +48,7 @@ class RoomViewController: UIViewController {
             
             // Check if the user have number in this room or different room, if have, display the number to UI
             if (self.user?.currentNumber != 0) {
+                print("in if, currentNumber: \(self.user?.currentNumber)")
                 if self.user?.currentRoomId == self.room?.id {
                     self.hasNumberInThisRoom = true
                     self.userCurrentNumber.text = self.user?.currentNumber?.description
@@ -56,6 +57,17 @@ class RoomViewController: UIViewController {
                 }
                 self.takeNumberButton.isEnabled = false
             }
+        })
+        
+        
+        currentUserRef?.observe(.childChanged, with: { (snapshot) in
+            let newNumber = snapshot.value as? Int
+            if newNumber != nil {
+                self.userCurrentNumber.text = newNumber?.description
+//                self.takeNumberButton.isEnabled = false
+            }
+//            self.hasNumberInThisRoom = false
+//            self.takeNumberButton.isEnabled = false
         })
         
         // Handle change in current room
@@ -74,20 +86,41 @@ class RoomViewController: UIViewController {
                 self.roomCurrentNumber.text = room.currentNumber?.description
             }
             
-            // Reset currentNumber of user to 0, when currentNumber of room larger than currentNumber of user
-//            print("hasNumberInThisRoom: \(self.hasNumberInThisRoom)")
-            print("room currentNumber: \(self.room?.currentNumber)")
-            print("user currentNumber: \(self.user?.currentNumber)")
+            // Show alert
+            print("room CurrentNumber: \(self.room?.currentNumber)")
+            print("user CurrentNumber: \(self.user?.currentNumber)")
+            
+            
+            let alertController = UIAlertController(title: "Get Ready!",
+                                                    message:"Your number is near",
+                                                    preferredStyle:.alert)
+            let cancelAction = UIAlertAction(title: "Cancel",
+                                             style: .cancel,
+                                             handler: nil)
+            alertController.addAction(cancelAction)
+            
+            if self.room?.currentNumber != nil && self.user?.currentNumber != nil {
+                print("inside if Action")
+                let num = self.user!.currentNumber! - self.room!.currentNumber!
+                print("num: \(num)")
+                if num == 3 || num == 1 {
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+            
             if self.hasNumberInThisRoom! && (self.room!.currentNumber! >= self.user!.currentNumber!) {
+//                print("room CurrentNumber: \(self.room?.currentNumber)")
+//                print("user CurrentNumber: \(self.user?.currentNumber)")
+//                print("hasNumber: \(self.hasNumberInThisRoom), compare: \(self.room!.currentNumber! >= self.user!.currentNumber!)")
                 self.currentUserRef?.updateChildValues(["currentNumber" : 0])
                 self.userCurrentNumber.text = 0.description
                 self.currentUserRef?.updateChildValues(["currentRoomId" : ""])
+                print("set take button to true")
                 self.takeNumberButton.isEnabled = true
             }
         })
     }
 
-    // CHECK THIS
     @IBAction func takeNumberButtonClicked(_ sender: UIBarButtonItem) {
         // Update selected room totalNumber when user take number
         self.currentRoomRef?.updateChildValues(["totalUsers" : (self.room?.totalUsers!)! + 1])

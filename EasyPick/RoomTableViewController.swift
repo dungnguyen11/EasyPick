@@ -39,7 +39,6 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
             }
             print("isUserSaved: \(isUserSaved)")
             if !isUserSaved {
-                print("call on Unsaved")
                 let newUser = RoomUser(id: (self.currentUser?.uid)!,
                                        name: (self.currentUser?.displayName)!)
                 self.addUserToDatabase(userReference: self.userRef, user: newUser)
@@ -50,7 +49,6 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
         // Load all available rooms from Firebase database
         roomRef = Database.database().reference().child("Rooms")
         roomRef.observe( .value) { (snapshot) in
-            if snapshot.childrenCount > 0 {
                 self.rooms = []
                 for rooms in snapshot.children.allObjects as! [DataSnapshot] {
                     let room = rooms.value as? [String: AnyObject]
@@ -68,7 +66,6 @@ class RoomTableViewController: UITableViewController, FUIAuthDelegate {
                     self.rooms.append(newRoom)
                 }
                 self.roomTableView.reloadData()
-            }
         }
         
         // Reload tableView when currentNumber or name of a room change
