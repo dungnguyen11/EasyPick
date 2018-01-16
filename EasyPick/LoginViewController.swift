@@ -13,15 +13,20 @@ import FirebaseAuthUI
 class LoginViewController: UIViewController, FUIAuthDelegate, UINavigationControllerDelegate {
     
 
+    @IBOutlet weak var GifView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        GifView.loadGif(name: "2")
         checkLogin()
     }
     
 
-    @IBAction func LoginButtonClicked(_ sender: UIBarButtonItem) {
-        print("Log in did clicked")
+//    @IBAction func LoginButtonClicked(_ sender: UIBarButtonItem) {
+////        print("Log in did clicked")
+////        login()
+//    }
+    
+    @IBAction func LoginButtonClicked(_ sender: UIButton) {
         login()
     }
     

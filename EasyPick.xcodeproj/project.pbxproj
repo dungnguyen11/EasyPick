@@ -23,6 +23,11 @@
 		0A969D9320033BCC00E81494 /* EasyPickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A969D9220033BCC00E81494 /* EasyPickUITests.swift */; };
 		4F9BBA15D4CEF76AEB36ECEF /* Pods_EasyPickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E30E15E1681FA0E1DB9184D /* Pods_EasyPickTests.framework */; };
 		A1FABB8EF857A9414F22D246 /* Pods_EasyPick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06225D789A9558E80C76715C /* Pods_EasyPick.framework */; };
+		F1AA12D0200E3258000DB73F /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA12CF200E3258000DB73F /* Swift+Gif.swift */; };
+		F1AA12D2200E3298000DB73F /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = F1AA12D1200E3298000DB73F /* 2.gif */; };
+		F1AA12D8200E60D3000DB73F /* Lora-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1AA12D6200E60CA000DB73F /* Lora-Italic.ttf */; };
+		F1AA12D9200E60D3000DB73F /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1AA12D7200E60CE000DB73F /* Lobster-Regular.ttf */; };
+		F1AA12DB200E60E8000DB73F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA12DA200E60E8000DB73F /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +54,6 @@
 		0A0CA13C20035ED700F17420 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		0A3B513D200B3382008711A0 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		0A873C97200BEAFB00485581 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0A91BE3F200A270D000BC423 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A91BE41200A28BC000BC423 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		0A91BE43200A28E3000BC423 /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
 		0A969D6F20033BCB00E81494 /* EasyPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +76,11 @@
 		5FAE92A030D0AE45773720D6 /* Pods-EasyPick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPick/Pods-EasyPick.debug.xcconfig"; sourceTree = "<group>"; };
 		E04D4BB2112DDA17BFC82D79 /* Pods-EasyPickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyPickUITests/Pods-EasyPickUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5F86D827E1A712EE7EE412D /* Pods_EasyPickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyPickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1AA12CF200E3258000DB73F /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
+		F1AA12D1200E3298000DB73F /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		F1AA12D6200E60CA000DB73F /* Lora-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Italic.ttf"; sourceTree = "<group>"; };
+		F1AA12D7200E60CE000DB73F /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		F1AA12DA200E60E8000DB73F /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,18 +145,21 @@
 		0A969D7120033BCC00E81494 /* EasyPick */ = {
 			isa = PBXGroup;
 			children = (
+				F1AA12D5200E5E80000DB73F /* Fonts */,
 				0A0CA13920035EB500F17420 /* Model */,
 				0A873C97200BEAFB00485581 /* GoogleService-Info.plist */,
+				F1AA12D1200E3298000DB73F /* 2.gif */,
 				0A969D7220033BCC00E81494 /* AppDelegate.swift */,
 				0A969D7420033BCC00E81494 /* LoginViewController.swift */,
 				0A91BE43200A28E3000BC423 /* RoomTableViewController.swift */,
 				0A91BE41200A28BC000BC423 /* RoomTableViewCell.swift */,
 				0A3B513D200B3382008711A0 /* RoomViewController.swift */,
 				0A969D7620033BCC00E81494 /* Main.storyboard */,
-				0A91BE3F200A270D000BC423 /* GoogleService-Info.plist */,
 				0A969D7920033BCC00E81494 /* Assets.xcassets */,
 				0A969D7B20033BCC00E81494 /* LaunchScreen.storyboard */,
+				F1AA12DA200E60E8000DB73F /* RoundButton.swift */,
 				0A969D7E20033BCC00E81494 /* Info.plist */,
+				F1AA12CF200E3258000DB73F /* Swift+Gif.swift */,
 			);
 			path = EasyPick;
 			sourceTree = "<group>";
@@ -191,6 +203,15 @@
 				E5F86D827E1A712EE7EE412D /* Pods_EasyPickUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1AA12D5200E5E80000DB73F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA12D7200E60CE000DB73F /* Lobster-Regular.ttf */,
+				F1AA12D6200E60CA000DB73F /* Lora-Italic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +330,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1AA12D8200E60D3000DB73F /* Lora-Italic.ttf in Resources */,
 				0A969D7D20033BCC00E81494 /* LaunchScreen.storyboard in Resources */,
+				F1AA12D2200E3298000DB73F /* 2.gif in Resources */,
+				F1AA12D9200E60D3000DB73F /* Lobster-Regular.ttf in Resources */,
 				0A873C98200BEAFB00485581 /* GoogleService-Info.plist in Resources */,
 				0A969D7A20033BCC00E81494 /* Assets.xcassets in Resources */,
 				0A969D7820033BCC00E81494 /* Main.storyboard in Resources */,
@@ -500,6 +524,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1AA12DB200E60E8000DB73F /* RoundButton.swift in Sources */,
+				F1AA12D0200E3258000DB73F /* Swift+Gif.swift in Sources */,
 				0A91BE42200A28BC000BC423 /* RoomTableViewCell.swift in Sources */,
 				0A91BE44200A28E3000BC423 /* RoomTableViewController.swift in Sources */,
 				0A3B513E200B3382008711A0 /* RoomViewController.swift in Sources */,
@@ -676,6 +702,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQQXHDUW7N;
 				INFOPLIST_FILE = EasyPick/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dungnguyen.EasyPick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -692,6 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQQXHDUW7N;
 				INFOPLIST_FILE = EasyPick/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dungnguyen.EasyPick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
